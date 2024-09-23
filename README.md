@@ -6,31 +6,31 @@ This project aims to classify three infectious skin diseases - Chickenpox, Measl
 
 ### Dataset
 
-<b>Total classes</b>: 3 (Chickenpox, Measles, Monkeypox)
-<b>Training data</b>: 160 images per class (480 total)
-<b>Validation data</b>: 33 images per class (99 total)
+    - <b>Total classes</b>: 3 (Chickenpox, Measles, Monkeypox)
+    - <b>Training data</b>: 160 images per class (480 total)
+    - <b>Validation data</b>: 33 images per class (99 total)
 
 ## Models Implemented
 
 ### Custom CNN
 
-<b>Parameters</b>: 31.58 million
-<b>Architecture</b>: Custom-designed convolutional neural network
+    - <b>Parameters</b>: 31.58 million
+    - <b>Architecture</b>: Custom-designed convolutional neural network
 
 
 ### ResNet50
 
-<b>Parameters</b>: 23 million (pretrained)
-<b>Architecture</b>: 50-layer residual network
+    - <b>Parameters</b>: 23 million (pretrained)
+    - <b>Architecture</b>: 50-layer residual network
 
 
 ### Inception-ResNet-V2
 
-<b>Parameters</b>: 55.9 million (pretrained)
-<b>Architecture</b>: Hybrid of Inception and ResNet architectures
+    - <b>Parameters</b>: 55.9 million (pretrained)
+    - <b>Architecture</b>: Hybrid of Inception and ResNet architectures
 
 
 ### NASNet-A-Large
 
-<b>Parameters</b>: 89 million (pretrained)
-<b>Architecture</b>: Neural Architecture Search Network
+    - <b>Parameters</b>: 89 million (pretrained)
+    - <b>Architecture</b>: Neural Architecture Search Network
