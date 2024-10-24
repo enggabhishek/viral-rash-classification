@@ -34,3 +34,9 @@ This project aims to classify three infectious skin diseases - Chickenpox, Measl
 
 <b>Parameters</b>: 89 million (pretrained)</br>
 <b>Architecture</b>: Neural Architecture Search Network</br>
+
+## YOLO11n Classification
+
+<p>YOLO11 classification is an evolution of the YOLO (You Only Look Once) architecture tailored for image classification tasks. It processes images in real-time, leveraging its speed and accuracy.</p>
+
+![alt text](YOLO_true_pred.png)
