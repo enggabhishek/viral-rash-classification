@@ -385,7 +385,6 @@ PySocks==1.7.1
 pyspark==3.5.3
 pytensor==2.25.5
 pytest==7.4.4
-python-apt==0.0.0
 python-box==7.2.0
 python-dateutil==2.8.2
 python-dotenv==1.0.1
