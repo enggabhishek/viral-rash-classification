@@ -486,7 +486,7 @@ torch==2.4.1
 torchaudio @ https://download.pytorch.org/whl/cu121_full/torchaudio-2.4.1%2Bcu121-cp310-cp310-linux_x86_64.whl
 torchsummary==1.5.1
 torchvision @ https://download.pytorch.org/whl/cu121_full/torchvision-0.19.1%2Bcu121-cp310-cp310-linux_x86_64.whl
-tornado==6.3.3
+tornado==6.4.1
 tqdm==4.66.5
 traitlets==5.7.1
 traittypes==0.2.1
