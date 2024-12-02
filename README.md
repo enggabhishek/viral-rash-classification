@@ -1,5 +1,5 @@
 # Viral Rash Classification
-![alt text](image-classification\images\rash_image.png)
+![alt text](image-classification/images/rash_image.png)
 
 ## Project Overview
 This project aims to classify three infectious skin diseases - Chickenpox, Measles, and Monkeypox - using various deep learning models. The goal is to compare the performance of different architectures on a relatively small dataset of medical images.
