@@ -39,7 +39,7 @@ This project aims to classify three infectious skin diseases - Chickenpox, Measl
 
 <p>YOLO11 classification is an evolution of the YOLO (You Only Look Once) architecture tailored for image classification tasks. It processes images in real-time, leveraging its speed and accuracy.</p>
 
-![alt text](yolo_true_pred.png)
+![alt text](image-classification/images/yolo_true_pred.png)
 
 Download images folder from the following link:
 <a href ='https://drive.google.com/file/d/1uRUF5hoAjwKuinrVuZV49FSMaXhrOHlZ/view?usp=sharing'> Rash Images</a>
