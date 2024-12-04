@@ -3,7 +3,6 @@ import os
 from torchvision import transforms, models
 from PIL import Image
 import timm
-
 IMAGE_HEIGHT = 299
 IMAGE_WIDTH = 299
 
