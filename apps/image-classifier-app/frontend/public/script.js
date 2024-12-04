@@ -43,7 +43,7 @@ classifyButton.addEventListener("click", async (e) => {
     imageData.append("model", selectedModel); // Add the selected model to the request
 
     try {
-        const response = await fetch("http://localhost:5000/classify", {
+        const response = await fetch(`${process.env.HOST}/classify`, {
             method: "POST",
             body: imageData,
         });
