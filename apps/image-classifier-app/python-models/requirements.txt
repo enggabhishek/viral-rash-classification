@@ -14,3 +14,4 @@ torch==2.3.0
 markupsafe==3.0.2
 torchvision==0.18.0
 Jinja2==3.1.4
+click==8.1.7
