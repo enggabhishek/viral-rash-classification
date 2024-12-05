@@ -2,8 +2,10 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import os
 from tf_models import predictImagesClass
-# from pytorch_models import predict_images_class
+from pytorch_models import predict_images_class
 import io
+from dotenv import load_dotenv
+load_dotenv()
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all domains
@@ -23,11 +25,11 @@ def classify_image():
     model_name = request.form['model']
     print("It is working",model_name)
     if model_name == 'resnet50':
-        # result = predict_images_class(model_name, image_bytes)
-        pass
+        result = predict_images_class(model_name, image_bytes)
+        # pass
     elif model_name == 'nesnet_a_large':
-        # result = predict_images_class(model_name, image_bytes)
-        pass
+        result = predict_images_class(model_name, image_bytes)
+        # pass
     elif model_name == 'inception_resnet_v2':
         model_name=os.getenv('MODEL_LOC')+'inception_resnet_v2.keras'
         print(model_name)

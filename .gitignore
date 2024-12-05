@@ -16,3 +16,5 @@ YOLO_Confusion_Matrix.png
 apps/deployment/persistent-volume-claim.yaml
 apps/deployment/postgres-statefulset.yaml
 apps/image-classifier-app/python-models/.env
+apps/image-classifier-app/frontend/.env
+apps/image-classifier-app/python-models/venv
