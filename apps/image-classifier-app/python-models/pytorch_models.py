@@ -17,7 +17,7 @@ def getType(id):
 def predict_images_class(model_name, image_data):
     model=''
     prediction = ''
-    
+    checkpoint = ''
     transform = transforms.Compose([
     transforms.Resize((IMAGE_WIDTH, IMAGE_HEIGHT)),
     transforms.ToTensor(),
@@ -26,12 +26,15 @@ def predict_images_class(model_name, image_data):
     
     if model_name=='resnet50':
         model = models.resnet50(weights=None)
+        model_name=os.getenv('MODEL_LOC')+model_name+'.pt'
+        checkpoint = torch.load(model_name, weights_only=True)
+        print(model_name+" 31 line")
     else:
         model = timm.create_model('nasnetalarge', pretrained=False)
+        model_name=os.getenv('MODEL_LOC')+model_name+'.pt'
+        checkpoint = torch.load(model_name, weights_only=True, map_location=torch.device('cpu'))
         
-    model_name=os.getenv('MODEL_LOC')+model_name+'.pt'
-    print(model_name+" 31 line")
-    checkpoint = torch.load(model_name, weights_only=True)
+
     model.load_state_dict(checkpoint['model_state_dict'])
     eval = model.eval()
     

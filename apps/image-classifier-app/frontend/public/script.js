@@ -27,7 +27,7 @@ classifyButton.addEventListener("click", async (e) => {
     // Get the selected model from the dropdown
     const selectedModel = modelName.value;
 
-    // Validate the form inputs
+    // Validate the form inputs+
     if (!imageInput.files[0]) {
         classificationResultDiv.innerText = "Please select an image.";
         return;
@@ -39,11 +39,11 @@ classifyButton.addEventListener("click", async (e) => {
     }
 
     const imageData = new FormData();
-    imageData.append("image", imageInput.files[0]);
+    // imageData.append("image", imageInput.files[0]);
     imageData.append("model", selectedModel); // Add the selected model to the request
 
     try {
-        const response = await fetch(`${process.env.HOST}/classify`, {
+        const response = await fetch('http://ml-models.enggabhishek369-dev.svc.cluster.local:5000/classify', {
             method: "POST",
             body: imageData,
         });
@@ -55,7 +55,7 @@ classifyButton.addEventListener("click", async (e) => {
         const classificationResult = await response.json();
         classificationResultDiv.innerText = `Classification result: ${classificationResult.message}`;
     } catch (error) {
-        console.error(error);
-        classificationResultDiv.innerText = "An error occurred during classification.";
+        console.error("Error sending request:", error);
+        classificationResultDiv.innerText = "An error occurred during classification." + error;
     }
 });
