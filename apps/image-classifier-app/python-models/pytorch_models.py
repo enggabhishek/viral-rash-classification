@@ -1,5 +1,7 @@
-import torch
 import os
+os.environ['CUDA_VISIBLE_DEVICES'] = '-1'  # Disable GPU
+import torch
+torch.set_default_device('cpu')  # Ensure CPU usage
 from torchvision import transforms, models
 from PIL import Image
 import timm
@@ -27,7 +29,8 @@ def predict_images_class(model_name, image_data):
     else:
         model = timm.create_model('nasnetalarge', pretrained=False)
         
-    model_name=os.path.join(os.getenv('MODEL_LOC'),model_name,'.keras')
+    model_name=os.getenv('MODEL_LOC')+model_name+'.pt'
+    print(model_name+" 31 line")
     checkpoint = torch.load(model_name, weights_only=True)
     model.load_state_dict(checkpoint['model_state_dict'])
     eval = model.eval()
