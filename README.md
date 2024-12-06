@@ -12,7 +12,7 @@ This project aims to classify three infectious skin diseases - Chickenpox, Measl
 Clone the repository using the following command:
 
 ```bash
-git clone https://github.com/hemadataworksai/ipedsllm.git
+git clone https://github.com/enggabhishek/viral-rash-classification.git
 ```
 
 ### 2. Setting up a Virtual Environment
