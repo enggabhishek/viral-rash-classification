@@ -40,8 +40,7 @@ def classify_image():
         print(model_name)
         result=predictImagesClass(model_name, image_bytes, image_width=299, image_height=299)
         pass
-        print(result)
-        
+               
     elif model_name == 'custom_cnn':
         model_name=os.getenv('MODEL_LOC')+'custom_cnn.keras'
         print(model_name)
