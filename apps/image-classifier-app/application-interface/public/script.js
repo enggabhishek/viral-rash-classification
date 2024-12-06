@@ -20,7 +20,15 @@ imageInput.addEventListener("change", () => {
         imagePreview.classList.add("d-none"); // Hide preview
     }
 });
+// Fetch environment variables from the server
+let host;
 
+fetch('/env')
+  .then(response => response.json())
+  .then(data => {
+    host = data.HOST;
+  })
+  .catch(error => console.error('Error fetching environment variables:', error));
 classifyButton.addEventListener("click", async (e) => {
     e.preventDefault();
 
@@ -39,11 +47,11 @@ classifyButton.addEventListener("click", async (e) => {
     }
 
     const imageData = new FormData();
-    // imageData.append("image", imageInput.files[0]);
+    imageData.append("image", imageInput.files[0]);
     imageData.append("model", selectedModel); // Add the selected model to the request
-
+    console.log('Other host: waah');
     try {
-        const response = await fetch('http://ml-models.enggabhishek369-dev.svc.cluster.local:5000/classify', {
+        const response = await fetch(`${host}/classify`, {
             method: "POST",
             body: imageData,
         });

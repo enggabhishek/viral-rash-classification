@@ -1,8 +1,49 @@
 # Viral Rash Classification
 ![alt text](image-classification/images/rash_image.png)
 
+![alt text](image-classification/images/ml_visualization.gif)
+
 ## Project Overview
 This project aims to classify three infectious skin diseases - Chickenpox, Measles, and Monkeypox - using various deep learning models. The goal is to compare the performance of different architectures on a relatively small dataset of medical images.
+
+
+### 1. Cloning the Repository
+
+Clone the repository using the following command:
+
+```bash
+git clone https://github.com/hemadataworksai/ipedsllm.git
+```
+
+### 2. Setting up a Virtual Environment
+
+#### Windows
+
+```bash
+# Create a virtual environment
+python -m venv venv
+
+# Activate the virtual environment
+venv\Scripts\activate
+```
+
+#### macOS/Linux
+
+```bash
+# Create a virtual environment
+python3.11 -m venv venv
+
+# Activate the virtual environment
+source venv/bin/activate
+```
+
+### 3. Installing Requirements
+
+Install the project dependencies using pip:
+
+```bash
+pip install -r requirements.txt
+```
 
 ### Dataset
 
