@@ -16,11 +16,10 @@ def getType(id):
 
 # predict new images
 def predictImagesClass(model_name, image_data, image_width, image_height):
-    # model = tf.keras.models.load_model(model_name)
+    model = tf.keras.models.load_model(model_name)
     img = image.load_img(image_data, target_size=(image_width, image_height))
-    # img_array = image.img_to_array(img)
-    # img_batch = np.expand_dims(img_array, axis=0)
-    # prediction = model.predict(img_batch)
-    # res = getType(np.argmax(prediction))
-    res='yes loaded image'
+    img_array = image.img_to_array(img)
+    img_batch = np.expand_dims(img_array, axis=0)
+    prediction = model.predict(img_batch)
+    res = getType(np.argmax(prediction))
     return res

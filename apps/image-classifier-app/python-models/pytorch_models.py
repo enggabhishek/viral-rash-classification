@@ -1,7 +1,5 @@
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = '-1'  # Disable GPU
 import torch
-torch.set_default_device('cpu')  # Ensure CPU usage
 from torchvision import transforms, models
 from PIL import Image
 import timm
